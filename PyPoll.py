@@ -10,7 +10,7 @@ file_to_load = os.path.join("..", "Resources", "election_results.csv")
 file_to_save = os.path.join("analysis", "election_analysis.txt")
 election_data = open(file_to_load, 'r')
 total_votes = 0 
-candidate_options = []
+candidate_options = [] 
 candidate_votes = {}
 
 winning_candidate = ""
@@ -41,7 +41,7 @@ with open(file_to_load) as election_data:
             candidate_options.append(candidate_name)
             candidate_votes[candidate_name] = 0
         candidate_votes[candidate_name] += 1
-        
+    
     for candidate_name in candidate_votes:
         votes = candidate_votes[candidate_name]
         vote_percentage = float(votes) / float(total_votes) * 100
